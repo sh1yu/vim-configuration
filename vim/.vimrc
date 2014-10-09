@@ -13,6 +13,7 @@ syntax on
 
 " 搜索设置
 set incsearch
+set hlsearch
 
 " 主题颜色设置
 set background=dark
