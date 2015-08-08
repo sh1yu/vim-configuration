@@ -32,7 +32,6 @@ set background=dark
 colorscheme molokai
 " colorscheme phd
 
-
 " 字体设置
 set guifont=YaHei\ Consolas\ Hybrid\ 11.5
 
@@ -45,15 +44,15 @@ nmap lb 0
 nmap le $
 " vnoremap <Leader>y "+y
 " vnoremap <Leader>p "+p
-nmap <Leader>q :q<CR>
-nmap <Leader>w :w<CR>
-nmap <Leader>WQ :wa<CR>:q<CR>
-nmap <Leader>Q :qa!<CR>
-nnoremap nw <C-W><C-W>
-nnoremap <Leader>lw <C-W>l
-nnoremap <Leader>hw <C-W>h
-nnoremap <Leader>kw <C-W>k
-nnoremap <Leader>jw <C-W>j
+" nmap <Leader>q :q<CR>
+" nmap <Leader>w :w<CR>
+" nmap <Leader>WQ :wa<CR>:q<CR>
+" nmap <Leader>Q :qa!<CR>
+" nnoremap nw <C-W><C-W>
+" nnoremap <Leader>lw <C-W>l
+" nnoremap <Leader>hw <C-W>h
+" nnoremap <Leader>kw <C-W>k
+" nnoremap <Leader>jw <C-W>j
 nmap <Leader>pa %
 
 
@@ -99,6 +98,17 @@ let g:SignatureMap = {
 nmap <Leader>ch :A<CR>
 nmap <Leader>sch :AS<CR>
 
+" NERDTree插件 文件目录
+nmap <Leader>t :NERDTreeToggle<CR>
+au vimenter * NERDTree
+" Go to previous (last accessed) window.
+autocmd VimEnter * wincmd p
+" exit vim when only NERDTree lefted.
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType")
+            \&& b:NERDTreeType == "primary") | q | endif
+let NERDTreeShowBookmarks=1
+" let NERDTreeWinPos="right"
+
 " 代码折叠 za打开或关闭当前折叠 zM关闭所有折叠 zR打开所有折叠
 set foldmethod=syntax
 set nofoldenable
@@ -108,7 +118,8 @@ set nofoldenable
 filetype on
 filetype plugin on
 
-
+" 补全提示即时过滤和匹配
+" set completeopt=longest,menu
 
 
 " ############################## "
