@@ -1,5 +1,5 @@
-#configuration
+# configuration
 
-## some usefull configuration files. such that .vimrc, fonts etc.
+some usefull configuration files. such that .vimrc, fonts etc.
 
-+ fonts: wqy-microhei, Yahei-consolas-hybird
+fonts: wqy-microhei, Yahei-consolas-hybird
