@@ -82,7 +82,9 @@ let g:syntastic_check_on_wq = 0
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
-au BufWrite * :Autoformat
+" 使用命令而非自动触发，避免有些文件操作卡住导致响应很慢
+" au BufWrite *.c,*.h,*.hpp,*.cpp :Autoformat
+" au BufWrite * :Autoformat
 
 " yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
