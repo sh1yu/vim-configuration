@@ -11,7 +11,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'The-NERD-tree'
@@ -20,6 +20,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'tomasr/molokai'
+Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -85,6 +88,9 @@ let g:autoformat_remove_trailing_spaces = 0
 " 使用命令而非自动触发，避免有些文件操作卡住导致响应很慢
 " au BufWrite *.c,*.h,*.hpp,*.cpp :Autoformat
 " au BufWrite * :Autoformat
+
+" rust.vim 插件
+let g:rustfmt_autosave = 1
 
 " yaml
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
